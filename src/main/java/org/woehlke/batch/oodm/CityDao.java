@@ -1,4 +1,4 @@
-package hello.oodm;
+package org.woehlke.batch.oodm;
 
 import java.util.List;
 

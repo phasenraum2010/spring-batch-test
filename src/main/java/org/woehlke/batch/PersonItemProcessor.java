@@ -1,4 +1,4 @@
-package hello;
+package org.woehlke.batch;
 
 
 import org.slf4j.Logger;

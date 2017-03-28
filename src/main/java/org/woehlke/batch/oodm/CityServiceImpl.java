@@ -1,4 +1,4 @@
-package hello.oodm;
+package org.woehlke.batch.oodm;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

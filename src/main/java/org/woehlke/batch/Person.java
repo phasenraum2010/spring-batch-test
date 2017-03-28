@@ -1,4 +1,4 @@
-package hello;
+package org.woehlke.batch;
 
 /**
  * Created by tw on 28.03.17.

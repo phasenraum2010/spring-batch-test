@@ -1,6 +1,6 @@
-package hello;
+package org.woehlke.batch;
 
-import hello.oodm.CityService;
+import org.woehlke.batch.oodm.CityService;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.launch.JobLauncher;

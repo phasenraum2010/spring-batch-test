@@ -1,7 +1,7 @@
-package hello;
+package org.woehlke.batch;
 
-import hello.oodm.City;
-import hello.oodm.CityService;
+import org.woehlke.batch.oodm.City;
+import org.woehlke.batch.oodm.CityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.StepContribution;
