@@ -17,7 +17,7 @@ public class CityDaoImpl implements CityDao {
 
     @Override
     public List<City> findAll() {
-        return entityManager.createQuery("select c from City c",City.class).getResultList();
+        return entityManager.createQuery("select c from hello.oodm.City c",City.class).getResultList();
     }
 
     @Override

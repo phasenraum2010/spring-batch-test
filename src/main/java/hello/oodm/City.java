@@ -1,7 +1,7 @@
 package hello.oodm;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
 /**
  * Created by tw on 28.03.17.
  */
