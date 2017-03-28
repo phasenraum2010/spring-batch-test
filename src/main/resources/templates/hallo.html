@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:spring="http://www.springframework.org/tags">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<h1>cities</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>State</th>
+    </tr>
+    <tr th:each="city : ${cities}">
+        <td th:text="${city.id}">Onions</td>
+        <td th:text="${city.name}">2.41</td>
+        <td th:text="${city.state}">yes</td>
+    </tr>
+</table>
+
+</body>
+</html>
