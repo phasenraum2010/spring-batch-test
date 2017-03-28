@@ -15,6 +15,8 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <maven.scm.version>1.9.4</maven.scm.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -156,6 +158,79 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
+            </plugin>
+            <!-- Fuer Continous-Integration et al.: Auschecken von Subversion mittels
+                Maven. http://maven.apache.org/scm/ -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm-providers</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm-providers-svn</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm-provider-svnexe</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm-provider-svn-commons</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm-providers-git</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm-provider-gitexe</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm-provider-git-commons</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm-manager-plexus</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm-managers</artifactId>
+                <version>${maven.scm.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.scm</groupId>
+                <artifactId>maven-scm-client</artifactId>
+                <version>${maven.scm.version}</version>
             </plugin>
         </plugins>
     </build>
