@@ -4,6 +4,7 @@ package org.woehlke.batch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
+import org.woehlke.batch.oodm.Person;
 
 /**
  * Created by tw on 28.03.17.

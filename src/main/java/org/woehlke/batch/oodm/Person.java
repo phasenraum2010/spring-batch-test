@@ -1,4 +1,4 @@
-package org.woehlke.batch;
+package org.woehlke.batch.oodm;
 
 /**
  * Created by tw on 28.03.17.
