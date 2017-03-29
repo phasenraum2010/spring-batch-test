@@ -14,9 +14,12 @@ import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.ClassPathResource;
+import org.woehlke.batch.conf.Config;
 import org.woehlke.batch.oodm.Person;
 
 import javax.sql.DataSource;
@@ -26,6 +29,8 @@ import javax.sql.DataSource;
  */
 @Configuration
 @EnableBatchProcessing
+@PropertySource("classpath:application.yml")
+@EnableConfigurationProperties(Config.class)
 public class BatchConfiguration {
 
     @Autowired

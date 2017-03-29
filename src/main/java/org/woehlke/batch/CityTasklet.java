@@ -1,5 +1,6 @@
 package org.woehlke.batch;
 
+import org.woehlke.batch.conf.Config;
 import org.woehlke.batch.oodm.City;
 import org.woehlke.batch.oodm.CityService;
 import org.slf4j.Logger;
@@ -21,13 +22,26 @@ public class CityTasklet implements Tasklet {
 
     private final CityService cityService;
 
+    private final Config config;
+
     @Autowired
-    public CityTasklet(CityService cityService) {
+    public CityTasklet(CityService cityService, Config config) {
         this.cityService = cityService;
+        this.config = config;
     }
 
     @Override
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
+        log.info("RemoteAddress: "+config.getRemoteAddress());
+        log.info("Username: "+config.getSecurity().getUsername());
+        log.info("Thomas: "+config.getThomas());
+        for(String role:config.getSecurity().getRoles()){
+            log.info("Role: "+role);
+        }
+        for(String willy:config.getWilly()){
+            log.info("Willy: "+willy);
+        }
+        log.info("--------------------------------------------------");
         int number = cityService.deleteAll();
         log.info("deleteted "+number+" cities");
         City c1 = new City();
